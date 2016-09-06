@@ -44,8 +44,8 @@ Drawbacks:
 
 ## Why REDIS ? 
 The Redis instance running alongside the Loadbalancer is operated in a master slave configuration. The Redis instance operated upon by the API server is categorized as the master. 
-Whenever a new database is added to any couchdb instance ( via an API call )  , an entry is made in REDIS to with the key as the database name and the server Address. 
-As soon as the change percolates between the REDIS instances of the API server and the load balancer, all follow up requests are forwarded to the destination server . 
+Whenever a new database is added to any couchdb instance ( via an call to API server )  , an entry is made in REDIS to with the key as the database name and the server Address. 
+As soon as the change percolates between the REDIS instances of the API server and the load balancer, all follow up requests for data sync are forwarded to the destination server . 
 
 
 
